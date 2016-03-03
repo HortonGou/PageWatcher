@@ -11,13 +11,13 @@
     "chrome://favicon/"
 	],
 	"background":{
-		"scripts":["jquery-1.12.1.min.js","background.js"],
+		"scripts":["scripts/jquery-1.12.1.min.js","scripts/background.js"],
 		"persistent":false
 	},
   "options_page":"options.html",
 	"browser_action": {
 		"default_title": "网页监控助手",
-		"default_icon": "eye.png",
+		"default_icon": "images/eye.png",
     "default_popup":"popup.html"
 	},
   "icons":{
@@ -28,6 +28,6 @@
   "content_scripts":[{
     "matches":["*://*/*"],
     "css":[],
-    "js":["jquery-1.12.1.min.js"]
+    "js":["scripts/jquery-1.12.1.min.js"]
   }]
 }

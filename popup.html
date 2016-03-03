@@ -1,25 +1,39 @@
 ﻿<!doctype html>
 <html>
 	<head>
-		<title>大工选课助手设置</title>
+		<title>网页监控助手设置</title>
 		<style>
 			body{
 				min-width:357px;
 				overflow-x:hidden;
 			}
+      .form-text{
+        height: 20px;
+        padding: 6px 12px;
+        font-size: 14px;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
 		</style>
     
-		<script src="popup.js"></script>
+		<script src="scripts/popup.js"></script>
 	</head>
 	<body>
 	<p align="center">欢迎使用网页监控助手！</p>
   <div style="margin-top:5px;">
-    <div>
-    <div align="center"><label>添加邮箱：</label><input type="text" placeholder="请输入邮箱地址" id="emailAddress"></input><br/>
-    <label>刷新频率：</label><input type="text" value="600" id="timeInterval"/>秒</div>
+    <div align="center">
+      <div>
+        <label>添加邮箱：</label><input class="form-text" type="text" placeholder="目前只支持QQ邮箱" id="emailAddress"/> &nbsp
+      </div>
+      <div style="margin-top:10px;">
+        <label>刷新频率：</label><input class="form-text" type="text" value="600" id="timeInterval" placeholder="请输入刷新频率"/> 秒
+      </div>
     <div style="margin-top:10px;margin-bottom:20px;" align="center">
-    <input type="button" value="开始监听" id="btStart"/>
-    <input type="button" value="停止监听" id="btStop" style="margin-left:10px;"/>
+      <input type="button" value="开始监听" id="btStart"/>
+      <input type="button" value="停止监听" id="btStop" style="margin-left:10px;"/>
     </div>
   </div>
 	</body>

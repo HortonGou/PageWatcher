@@ -11,12 +11,13 @@
  ![popup截图](https://raw.githubusercontent.com/liyumeng/PageWatcher/resource/images/example1.png)
 
 ##插件下载：
-  网页监控助手下载地址：[点击下载](https://raw.githubusercontent.com/liyumeng/PageWatcher/resource/PageWatcher.crx){:target="_blank"}
+  网页监控助手下载地址：[点击下载](https://raw.githubusercontent.com/liyumeng/PageWatcher/resource/PageWatcher.crx)
 
 ##安装方法：
 1. 搜狗浏览器：打开搜狗浏览器，直接拖拽上去即可。
-2. chrome浏览器：点击这个chrome扩展页面地址：[请稍后点击](chrome://extensions/){:target="_blank"}，然后将下载到的PageWatcher.crx拖拽上去即可。
-3. 360极速浏览器：使用360极速浏览器打开PageWatcher.crx即可。
+2. 360极速浏览器：使用360极速浏览器打开PageWatcher.crx即可。
+3. chrome浏览器：在chrome中输入该地址：chrome://extensions/，然后将下载到的PageWatcher.crx拖拽上去即可。
+
 
 ##TODO:
 

@@ -33,7 +33,7 @@ function timeTick(){
       if(source==''){
         source=data;
       }else if(source.localeCompare(data)!=0){
-        chrome.extension.sendMessage({message:'PageChangedEvent'});
+        chrome.extension.sendMessage({message:'PageChangedEvent',url:location.href});
         stopTimer();
         location.reload();
       }

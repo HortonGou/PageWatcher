@@ -19,6 +19,11 @@
 		"default_icon": "eye.png",
     "default_popup":"popup.html"
 	},
+  "icons":{
+    "16":"images/eye16.png",
+    "48":"images/eye48.png",
+    "72":"images/eye72.png"
+  },
   "content_scripts":[{
     "matches":["*://*/*"],
     "css":[],

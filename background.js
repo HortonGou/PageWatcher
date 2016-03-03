@@ -11,10 +11,12 @@ chrome.extension.onMessage.addListener(
       chrome.tabs.executeScript(null,{file:"jquery-1.12.1.min.js"});
       chrome.tabs.executeScript(null,{file:"page.js"});
       hasInject=true;
+      
     }
     
     if(request.message=="PageChangedEvent")
     {
+      sendMail('5052909@qq.com','您监控的网页发生了改变','您监控的网页发生了改变,网页地址：'+request.url);
       playNotification();
     }
     
@@ -51,4 +53,8 @@ chrome.extension.onMessage.addListener(
         window.audio=null;
       }
     };
+ }
+ 
+ function sendMail(receiver,subject,message){
+   $.post('http://mail.liyumeng.me/SendMail','token=7F830C40B1594B05901779C1D24E2940&receivers='+receiver+'&subject='+subject+'&message='+message,function(dat){console.log(dat);});
  }

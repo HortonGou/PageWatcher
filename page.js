@@ -23,7 +23,16 @@ chrome.storage.sync.get('timeInterval',function(data){
 });
 
 function timeTick(){
-  content="网页监听助手已运行"+second+"秒,共刷新"+timerCount+"次,每"+timeInterval+"秒刷新一次。";
+  var time;
+  if(second<60){
+    time=second+"秒";
+  }
+  else if(second>=60 && second<3600){
+    time=(parseInt)(second/60)+"分"+second%60+"秒";
+  }else if(second>=3600){
+    time=(parseInt)(second/3600)+"时"+(parseInt)((second%3600)/60)+"分"+(second%3600)%60+"秒";
+  }
+  content="网页监听助手已运行"+time+",共刷新"+timerCount+"次,每"+timeInterval+"秒刷新一次。";
   $('#ymlInfo').html(content);
   if(second%timeInterval==0)
   {

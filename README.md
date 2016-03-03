@@ -8,7 +8,7 @@
 1. 自定义刷新时间间隔，自动刷新网页，当网页内容发生改变时，进行提示
 2. 提示分为3种方式，声音提示、桌面弹窗提示、发送QQ邮件提示
 
- ![popup截图](http://liyumeng.me/static/upload/img/201603032208504418.png)
+ ![popup截图](https://raw.githubusercontent.com/liyumeng/PageWatcher/resource/images/example1.png)
 
 ##TODO:
 

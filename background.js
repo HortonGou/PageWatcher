@@ -16,7 +16,10 @@ chrome.extension.onMessage.addListener(
     
     if(request.message=="PageChangedEvent")
     {
-      sendMail('5052909@qq.com','您监控的网页发生了改变','您监控的网页发生了改变,网页地址：'+request.url);
+      chrome.storage.sync.get('emailAddress',function(data){
+        sendMail(data.emailAddress,'您监控的网页发生了改变','您监控的网页发生了改变,网页地址：'+request.url);
+      });
+      
       playNotification();
     }
     

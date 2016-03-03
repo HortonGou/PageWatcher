@@ -11,7 +11,6 @@ chrome.extension.onMessage.addListener(
       chrome.tabs.executeScript(null,{file:"jquery-1.12.1.min.js"});
       chrome.tabs.executeScript(null,{file:"page.js"});
       hasInject=true;
-      
     }
     
     if(request.message=="PageChangedEvent")

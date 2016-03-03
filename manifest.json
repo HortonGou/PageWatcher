@@ -17,13 +17,13 @@
   "options_page":"options.html",
 	"browser_action": {
 		"default_title": "网页监控助手",
-		"default_icon": "images/eye.png",
+		"default_icon": "images/eye24.png",
     "default_popup":"popup.html"
 	},
   "icons":{
     "16":"images/eye16.png",
     "48":"images/eye48.png",
-    "72":"images/eye72.png"
+    "128":"images/eye72.png"
   },
   "content_scripts":[{
     "matches":["*://*/*"],

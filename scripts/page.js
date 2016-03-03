@@ -1,6 +1,4 @@
-﻿//todo:判断是否已经添加过ymlInfo
-
-if($('#ymlInfo').length==0)
+﻿if($('#ymlInfo').length==0)
 {
   $('body').prepend("<div id='ymlInfo'>网页监听助手准备运行，正在读取配置数据</div>");
 }

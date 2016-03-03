@@ -8,6 +8,17 @@
 1. 自定义刷新时间间隔，自动刷新网页，当网页内容发生改变时，进行提示
 2. 提示分为3种方式，声音提示、桌面弹窗提示、发送QQ邮件提示
 
+ ![popup截图](https://raw.githubusercontent.com/liyumeng/PageWatcher/resource/images/example1.png)
+
+##插件下载：
+  网页监控助手下载地址：[点击下载](https://raw.githubusercontent.com/liyumeng/PageWatcher/resource/PageWatcher.crx)
+
+##安装方法：
+1. 搜狗浏览器：打开搜狗浏览器，直接拖拽上去即可。
+2. 360极速浏览器：使用360极速浏览器打开PageWatcher.crx即可。
+3. chrome浏览器：在chrome中输入该地址：chrome://extensions/，然后将下载到的PageWatcher.crx拖拽上去即可。
+
+
 ##TODO:
 
 1. 设置提醒邮箱地址

@@ -1,5 +1,14 @@
 ﻿
 window.onload=function(){
+
+  chrome.storage.sync.get('emailAddress',function(data){
+        document.getElementById('emailAddress').value=data.emailAddress;
+  });
+
+  chrome.storage.sync.get('timeInterval',function(data){
+        document.getElementById('timeInterval').value=data.timeInterval;
+  });
+
  document.getElementById('btStart').onclick=function(){
     chrome.storage.sync.set({timeInterval:document.getElementById('timeInterval').value});    
     var myemail=document.getElementById("emailAddress").value;
@@ -16,8 +25,8 @@ window.onload=function(){
   };
 
   function fcheckMail(myemail){
-  var reg=/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/;
-  var check=reg.test(myemail);
-  return check;
+    var reg=/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/;
+    var check=reg.test(myemail);
+    return check;
   }
 };

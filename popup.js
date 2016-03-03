@@ -4,7 +4,7 @@ window.onload=function(){
     chrome.storage.sync.set({timeInterval:document.getElementById('timeInterval').value});    
     var myemail=document.getElementById("emailAddress").value;
     fcheckMail=function(myemail){
-      var reg=/^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/;
+      var reg=/^[A-Za-zd]+([-_.][A-Za-z\d]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/;
       var check=reg.test(myemail);
       return check;
     };

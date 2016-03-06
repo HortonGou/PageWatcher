@@ -14,6 +14,9 @@ var content="网页监听助手准备运行";
 var source='';  //初始网页的内容
 var timerCount=0; //目前的抓取次数
 var isRunning=false;
+var startHour=7;
+var stopHour=0;
+var extInfo='';
 
 chrome.storage.sync.get('timeInterval',function(data){
   timeInterval=data.timeInterval;
@@ -30,24 +33,33 @@ function timeTick(){
   }else if(second>=3600){
     time=(parseInt)(second/3600)+"时"+(parseInt)((second%3600)/60)+"分"+(second%3600)%60+"秒";
   }
-  content="网页监听助手已运行"+time+",共刷新"+timerCount+"次,每"+timeInterval+"秒刷新一次。";
-  $('#ymlInfo').html(content);
+  content="网页监听助手已运行"+time+",共刷新"+timerCount+"次,每"+timeInterval+"秒刷新一次。"+extInfo;
+
+  
   if(second%timeInterval==0)
   {
-    $.get(location.href,function(data){
-      data=data.replace(/<!--[\s\S]+?-->/g,'');
+    var hour=(new Date()).getHours();
+    if(hour<stopHour||hour>=startHour)
+    {
+      $.get(location.href,function(data){
+        data=data.replace(/<!--[\s\S]+?-->/g,'');
 
-      if(source==''){
-        source=data;
-      }else if(source.localeCompare(data)!=0){
-        chrome.extension.sendMessage({message:'PageChangedEvent',url:location.href});
-        stopTimer();
-        location.reload();
-      }
-      timerCount++;
-    });
+        if(source==''){
+          source=data;
+        }else if(source.localeCompare(data)!=0){
+          chrome.extension.sendMessage({message:'PageChangedEvent',url:location.href});
+          stopTimer();
+          location.reload();
+        }
+        timerCount++;
+      });
+      extInfo='';
+    }else{
+      extInfo="目前正处于休息时间，将于"+startHour+"点重新开始工作。";
+    }
   }
   second++;
+  $('#ymlInfo').html(content);
 }
 function startTimer(){
   isRunning=true;

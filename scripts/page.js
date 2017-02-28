@@ -14,7 +14,7 @@ var content="网页监听助手准备运行";
 var source='';  //初始网页的内容
 var timerCount=0; //目前的抓取次数
 var isRunning=false;
-var startHour=7;
+var startHour=0;
 var stopHour=0;
 var extInfo='';
 

@@ -44,7 +44,7 @@ chrome.extension.onMessage.addListener(
     
     var options={ 
           lang: "utf-8",
-          icon: "eye.png",
+          icon: "images/eye.png",
           body: "您监控的网页内容发生了改变！"
       };
     var n = new Notification("网页监控助手提醒！", options); 
